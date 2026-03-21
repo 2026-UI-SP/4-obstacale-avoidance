@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/4-obstacale-avoidance/static/css/main.bcac20e8.css",
-    "main.js": "/4-obstacale-avoidance/static/js/main.02625976.js",
-    "static/js/453.75afa6a2.chunk.js": "/4-obstacale-avoidance/static/js/453.75afa6a2.chunk.js",
+    "main.js": "/4-obstacale-avoidance/static/js/main.b225d0ad.js",
+    "static/js/453.84d4e597.chunk.js": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js",
     "index.html": "/4-obstacale-avoidance/index.html",
     "main.bcac20e8.css.map": "/4-obstacale-avoidance/static/css/main.bcac20e8.css.map",
-    "main.02625976.js.map": "/4-obstacale-avoidance/static/js/main.02625976.js.map",
-    "453.75afa6a2.chunk.js.map": "/4-obstacale-avoidance/static/js/453.75afa6a2.chunk.js.map"
+    "main.b225d0ad.js.map": "/4-obstacale-avoidance/static/js/main.b225d0ad.js.map",
+    "453.84d4e597.chunk.js.map": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bcac20e8.css",
-    "static/js/main.02625976.js"
+    "static/js/main.b225d0ad.js"
   ]
 }
