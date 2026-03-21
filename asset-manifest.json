@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/4-obstacale-avoidance/static/css/main.bcac20e8.css",
-    "main.js": "/4-obstacale-avoidance/static/js/main.b225d0ad.js",
-    "static/js/453.84d4e597.chunk.js": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js",
-    "index.html": "/4-obstacale-avoidance/index.html",
-    "main.bcac20e8.css.map": "/4-obstacale-avoidance/static/css/main.bcac20e8.css.map",
-    "main.b225d0ad.js.map": "/4-obstacale-avoidance/static/js/main.b225d0ad.js.map",
-    "453.84d4e597.chunk.js.map": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js.map"
+    "main.css": "/static/css/main.bcac20e8.css",
+    "main.js": "/static/js/main.44f0f6fc.js",
+    "static/js/453.84d4e597.chunk.js": "/static/js/453.84d4e597.chunk.js",
+    "index.html": "/index.html",
+    "main.bcac20e8.css.map": "/static/css/main.bcac20e8.css.map",
+    "main.44f0f6fc.js.map": "/static/js/main.44f0f6fc.js.map",
+    "453.84d4e597.chunk.js.map": "/static/js/453.84d4e597.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bcac20e8.css",
-    "static/js/main.b225d0ad.js"
+    "static/js/main.44f0f6fc.js"
   ]
 }
