@@ -6,12 +6,13 @@ const Game = () => {
 		unityProvider,
 		isLoaded,
 		addEventListener,
-		removeEventListener
+		removeEventListener,
+		sendMessage,
 	} = useUnityContext({
-		loaderUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.loader.js",
-		dataUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.data",
-		frameworkUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.framework.js",
-		codeUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.wasm",
+		loaderUrl: `${process.env.PUBLIC_URL}/UnityBuild/Build/Obstacle-Avoidance_Build.loader.js`,
+		dataUrl: `${process.env.PUBLIC_URL}/UnityBuild/Build/Obstacle-Avoidance_Build.data`,
+		frameworkUrl: `${process.env.PUBLIC_URL}/UnityBuild/Build/Obstacle-Avoidance_Build.framework.js`,
+		codeUrl: `${process.env.PUBLIC_URL}/UnityBuild/Build/Obstacle-Avoidance_Build.wasm`,
 	});
 
 	useEffect(() => {
@@ -31,6 +32,20 @@ const Game = () => {
 			removeEventListener("OnTrialEnd", handleOnTrialEnd);
 		};
 	}, [addEventListener, removeEventListener]);
+
+
+	const LEFT_TRIAL_AMT = 3;
+	const RIGHT_TRIAL_AMT = 2;
+	const CONTROL_TRIAL_AMT = 4;
+	const TRIAL_PATTERN = "LCRCLR";
+
+	useEffect(() => {
+		if (!isLoaded) return;
+		sendMessage("GameController", "SetLeftTrialAmt", LEFT_TRIAL_AMT);
+		sendMessage("GameController", "SetRightTrialAmt", RIGHT_TRIAL_AMT);
+		sendMessage("GameController", "SetControlTrialAmt", CONTROL_TRIAL_AMT);
+		sendMessage("GameController", "SetTrialPattern", TRIAL_PATTERN);
+	}, [isLoaded, sendMessage]);
 
 	return (
 		<div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
