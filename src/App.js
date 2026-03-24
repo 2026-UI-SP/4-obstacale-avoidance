@@ -9,12 +9,13 @@ function App() {
     const [gameStarted, setGameStarted] = useState(false);
 
     return (
-        <BrowserRouter basename="/4-obstacale-avoidance">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route
                     path="/"
                     element={<WelcomeScreen setGameStarted={setGameStarted} />}
                 />
+
                 <Route
                     path="/game"
                     element={

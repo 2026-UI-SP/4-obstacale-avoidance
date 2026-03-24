@@ -1,18 +1,18 @@
 {
   "name": "untitled",
   "version": "0.1.0",
-  "homepage": "https://2026-UI-SP.github.io/4-obstacale-avoidance",
+"homepage": "https://2026-UI-SP.github.io/4-obstacale-avoidance",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.6.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.3",
     "react-scripts": "5.0.1",
-    "react-unity-webgl": "^10.1.6",
+    "react-unity-webgl": "^9.5.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
