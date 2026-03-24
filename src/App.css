@@ -57,3 +57,20 @@ body {
   background-color: #b8b09d;
   transform: translateY(-2px);
 }
+
+.code-input {
+  margin-top: 12px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  outline: none;
+}
+
+.code-input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+}
