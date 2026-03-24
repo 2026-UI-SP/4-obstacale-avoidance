@@ -4,14 +4,14 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 const Game = () => {
 	const {
 		unityProvider,
-		isLoaded,
+		//isLoaded,
 		addEventListener,
 		removeEventListener
 	} = useUnityContext({
-		loaderUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.loader.js",
-		dataUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.data",
-		frameworkUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.framework.js",
-		codeUrl: "/UnityBuild/Build/Obstacle-Avoidance_Build.wasm",
+		loaderUrl: "/4-obstacale-avoidance/UnityBuild/Build/Obstacle-Avoidance_Build.loader.js",
+		dataUrl: "/4-obstacale-avoidance/UnityBuild/Build/Obstacle-Avoidance_Build.data",
+		frameworkUrl: "/4-obstacale-avoidance/UnityBuild/Build/Obstacle-Avoidance_Build.framework.js",
+		codeUrl: "/4-obstacale-avoidance/UnityBuild/Build/Obstacle-Avoidance_Build.wasm",
 	});
 
 	useEffect(() => {

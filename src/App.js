@@ -9,21 +9,16 @@ function App() {
     const [gameStarted, setGameStarted] = useState(false);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/4-obstacale-avoidance">
             <Routes>
                 <Route
                     path="/"
                     element={<WelcomeScreen setGameStarted={setGameStarted} />}
                 />
-
                 <Route
                     path="/game"
                     element={
-                        gameStarted ? (
-                            <Game />
-                        ) : (
-                            <Navigate to="/" replace />
-                        )
+                        gameStarted ? <Game /> : <Navigate to="/" replace />
                     }
                 />
             </Routes>
