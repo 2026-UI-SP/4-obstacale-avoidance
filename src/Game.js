@@ -16,11 +16,13 @@ const Game = () => {
 	});
 
 	useEffect(() => {
+		// after an individual trial ends it provides the following information as parameters.
 		const handleOnTrialEnd = (trialNum, condition, obstacle, collision, completion_time) => {
-			//alert(`DEBUG: Trial Ended - Trial Number: ${trialNum}, Condition: ${condition}, Obstacle: ${obstacle}, Collision: ${collision}, Completion Time: ${completion_time}`);
+			
 		};
+		// once EVERY trial is finished, the game will trigger the following event.
 		const TrialsFinished = () => {
-			//alert("DEBUG: TRIALS FINISHED");
+			
 		};
 
 		// Attach the listener
@@ -34,12 +36,16 @@ const Game = () => {
 		};
 	}, [addEventListener, removeEventListener]);
 
-
+	// TUNING KNOBS - adjust these values to change the number of trials and their pattern. 
+	// The pattern is a string where L = left trial, R = right trial, and C = control trial. 
+	// So "LCRCLR" would be left trial, control trial, right trial, control trial, and left trial.
+	// if you run out of left trials it will move to the next trial type in the pattern, 
 	const LEFT_TRIAL_AMT = 1;
 	const RIGHT_TRIAL_AMT = 1;
 	const CONTROL_TRIAL_AMT = 1;
 	const TRIAL_PATTERN = "LCRCLR";
 
+	// pass the trial information to Unity once it's loaded so it can set up the trials accordingly.
 	useEffect(() => {
 		if (!isLoaded) return;
 		sendMessage("GameController", "SetLeftTrialAmt", LEFT_TRIAL_AMT);
