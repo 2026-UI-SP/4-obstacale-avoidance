@@ -16,7 +16,12 @@ const Game = () => {
 	});
 
 	useEffect(() => {
-		// after an individual trial ends it provides the following information as parameters.
+		// after an individual trial ends it provides the following information: 
+		// trial number, 
+		// trial condition (0 control,1 left, 2 right), 
+		// obstacle collided with (0 none, 1 left, 2 right), 
+		// whether the user collided with the obstacle, 
+		// and the time it took to complete the trial.
 		const handleOnTrialEnd = (trialNum, condition, obstacle, collision, completion_time) => {
 			
 		};
