@@ -16,27 +16,28 @@ const Game = () => {
 	});
 
 	useEffect(() => {
-		const handleOnTrialEnd = (isWin) => {
-			if (isWin) {
-				alert("DEBUG: SAFE");
-			} else {
-				alert("DEBUG: COLLISION");
-			}
+		const handleOnTrialEnd = (trialNum, condition, obstacle, collision, completion_time) => {
+			//alert(`DEBUG: Trial Ended - Trial Number: ${trialNum}, Condition: ${condition}, Obstacle: ${obstacle}, Collision: ${collision}, Completion Time: ${completion_time}`);
+		};
+		const TrialsFinished = () => {
+			//alert("DEBUG: TRIALS FINISHED");
 		};
 
 		// Attach the listener
 		addEventListener("OnTrialEnd", handleOnTrialEnd);
+		addEventListener("TrialsOver", TrialsFinished);
 
 		// Clean up when the user leaves the Game page
 		return () => {
 			removeEventListener("OnTrialEnd", handleOnTrialEnd);
+			removeEventListener("TrialsOver", TrialsFinished);
 		};
 	}, [addEventListener, removeEventListener]);
 
 
-	const LEFT_TRIAL_AMT = 3;
-	const RIGHT_TRIAL_AMT = 2;
-	const CONTROL_TRIAL_AMT = 4;
+	const LEFT_TRIAL_AMT = 1;
+	const RIGHT_TRIAL_AMT = 1;
+	const CONTROL_TRIAL_AMT = 1;
 	const TRIAL_PATTERN = "LCRCLR";
 
 	useEffect(() => {
