@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
+import { useNavigate } from "react-router-dom";
+import { db } from "./firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
-const Game = () => {
+const Game = ({ participantCode }) => {
+	const navigate = useNavigate();
+
 	const {
 		unityProvider,
 		isLoaded,
@@ -16,21 +21,35 @@ const Game = () => {
 	});
 
 	useEffect(() => {
-		// after an individual trial ends it provides the following information: 
-		// trial number, 
-		// trial condition (0 control,1 left, 2 right), 
-		// obstacle collided with (0 none, 1 left, 2 right), 
-		// whether the user collided with the obstacle, 
+		// after an individual trial ends it provides the following information:
+		// trial number,
+		// trial condition (0 control,1 left, 2 right),
+		// obstacle collided with (0 none, 1 left, 2 right),
+		// whether the user collided with the obstacle,
 		// and the time it took to complete the trial.
-		const handleOnTrialEnd = (trialNum, condition, obstacle, collision, completion_time) => {
-			
-		};
-		// once EVERY trial is finished, the game will trigger the following event.
-		const TrialsFinished = () => {
-			
+		const handleOnTrialEnd = async (trialNum, condition, obstacle, collision, completion_time) => {
+			try {
+				await addDoc(collection(db, "trials"), {
+					participantCode,
+					trialNum,
+					condition,
+					obstacle,
+					collision,
+					completion_time,
+					timestamp: serverTimestamp()
+				});
+				console.log("Trial saved successfully");
+			} catch (e) {
+				console.error("Error saving trial: ", e);
+			}
 		};
 
-		// Attach the listener
+		// once EVERY trial is finished, the game will trigger the following event.
+		const TrialsFinished = () => {
+			navigate("/exit");
+		};
+
+		// Attach the listeners
 		addEventListener("OnTrialEnd", handleOnTrialEnd);
 		addEventListener("TrialsOver", TrialsFinished);
 
@@ -39,7 +58,7 @@ const Game = () => {
 			removeEventListener("OnTrialEnd", handleOnTrialEnd);
 			removeEventListener("TrialsOver", TrialsFinished);
 		};
-	}, [addEventListener, removeEventListener]);
+	}, [addEventListener, removeEventListener, participantCode, navigate]);
 
 	// TUNING KNOBS - adjust these values to change the number of trials and their pattern. 
 	// The pattern is a string where L = left trial, R = right trial, and C = control trial. 

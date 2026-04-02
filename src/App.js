@@ -4,14 +4,16 @@ import { useState } from "react";
 import LoginScreen from "./LoginScreen";
 import WelcomeScreen from "./WelcomeScreen";
 import Game from "./Game";
+import AdminLogin from "./AdminLogin";
+import AdminPage from "./AdminPage";
+import ExitScreen from "./ExitScreen";
 
 function App() {
-
     const [gameStarted, setGameStarted] = useState(false);
     const [participantCode, setParticipantCode] = useState(null);
 
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename="/4-obstacale-avoidance">
             <Routes>
                 <Route
                     path="/"
@@ -33,6 +35,9 @@ function App() {
                             : <Navigate to="/" replace />
                     }
                 />
+                <Route path="/admin-login" element={<AdminLogin />} />
+                <Route path="/admin" element={<AdminPage />} />
+                <Route path="/exit" element={<ExitScreen />} />
             </Routes>
         </BrowserRouter>
     );
