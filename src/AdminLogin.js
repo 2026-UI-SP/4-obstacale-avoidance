@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ADMIN_PASSWORD = "your-chosen-password-here";
+const ADMIN_PASSWORD = "P@55w0rd";
 
 function AdminLogin() {
     const [password, setPassword] = useState("");
