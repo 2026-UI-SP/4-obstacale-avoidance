@@ -79,8 +79,8 @@ const Game = ({ participantCode }) => {
 	}, [isLoaded, sendMessage]);
 
 	return (
-		<div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-			<Unity unityProvider={unityProvider} style={{ width: "90vw", height: "90vh" }} />
+		<div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100vw", height: "100vh", margin: "0" }}>
+			<Unity unityProvider={unityProvider} style={{ width: "90vw", height: "auto", aspectRatio: "16/9", maxHeight: "90vh", objectFit: "contain" }} />
 		</div>
 	);
 };
