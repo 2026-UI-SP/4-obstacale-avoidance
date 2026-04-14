@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import LoginScreen from "./LoginScreen";
 import WelcomeScreen from "./WelcomeScreen";
@@ -13,7 +13,7 @@ function App() {
     const [participantCode, setParticipantCode] = useState(null);
 
     return (
-        <BrowserRouter basename="/4-obstacale-avoidance">
+        <HashRouter basename="/4-obstacale-avoidance">
             <Routes>
                 <Route
                     path="/"
@@ -39,7 +39,7 @@ function App() {
                 <Route path="/admin" element={<AdminPage />} />
                 <Route path="/exit" element={<ExitScreen />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
