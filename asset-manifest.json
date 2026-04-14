@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/4-obstacale-avoidance/static/css/main.53b7fd32.css",
-    "main.js": "/4-obstacale-avoidance/static/js/main.1988917a.js",
+    "main.js": "/4-obstacale-avoidance/static/js/main.5261723a.js",
     "static/js/453.84d4e597.chunk.js": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js",
     "index.html": "/4-obstacale-avoidance/index.html",
     "main.53b7fd32.css.map": "/4-obstacale-avoidance/static/css/main.53b7fd32.css.map",
-    "main.1988917a.js.map": "/4-obstacale-avoidance/static/js/main.1988917a.js.map",
+    "main.5261723a.js.map": "/4-obstacale-avoidance/static/js/main.5261723a.js.map",
     "453.84d4e597.chunk.js.map": "/4-obstacale-avoidance/static/js/453.84d4e597.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53b7fd32.css",
-    "static/js/main.1988917a.js"
+    "static/js/main.5261723a.js"
   ]
 }
