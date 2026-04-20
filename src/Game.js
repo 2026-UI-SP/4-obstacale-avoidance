@@ -64,9 +64,9 @@ const Game = ({ participantCode }) => {
 	// The pattern is a string where L = left trial, R = right trial, and C = control trial. 
 	// So "LCRCLR" would be left trial, control trial, right trial, control trial, and left trial.
 	// if you run out of left trials it will move to the next trial type in the pattern, 
-	const LEFT_TRIAL_AMT = 1;
-	const RIGHT_TRIAL_AMT = 1;
-	const CONTROL_TRIAL_AMT = 1;
+	const LEFT_TRIAL_AMT = 10;
+	const RIGHT_TRIAL_AMT = 10;
+	const CONTROL_TRIAL_AMT = 10;
 	const TRIAL_PATTERN = "LCRCLR";
 
 	// pass the trial information to Unity once it's loaded so it can set up the trials accordingly.
