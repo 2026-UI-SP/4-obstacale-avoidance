@@ -1,7 +1,7 @@
 {
   "name": "untitled",
   "version": "0.1.0",
-  "homepage": "https://2026-UI-SP.github.io/4-obstacale-avoidance",
+  "homepage": "https://obstacleavoidance.cs.mtu.edu/cpanel",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
